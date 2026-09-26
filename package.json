@@ -1,17 +1,19 @@
 {
-  "name": "med2sync-frontend",
-  "private": true,
+  "name": "med2sync-database",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
-  "scripts": { "dev": "vite", "build": "vite build", "preview": "vite preview" },
-  "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "axios": "latest",
-    "lucide-react": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-router-dom": "latest",
-    "vite": "latest"
+  "description": "Mongoose database layer and workflow services for Med2Sync",
+  "scripts": {
+    "seed": "node scripts/seed.js",
+    "test": "node --test"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.1.4"
+  }
 }
